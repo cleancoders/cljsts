@@ -1,5 +1,5 @@
 {:foreign-libs
- [{:file "src/jsts.min.js",
+ [{:file "jsts.min.js",
    :provides ["com.cleancoders.cljsts"],
-   :file-min "src/jsts.min.js"}],
- :externs ["src/jsts.ext.js"]}
+   :file-min "jsts.min.js"}],
+ :externs ["jsts.ext.js"]}
