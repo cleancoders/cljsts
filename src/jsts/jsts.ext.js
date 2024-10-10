@@ -15,7 +15,8 @@ var jsts = {
         "Area": function () {},
         "Centroid": function () {},
         "ConvexHull": {
-            "RadialComparator": function () {}
+            "RadialComparator": function () {},
+            "getConvexHull": function () {}
         },
         "Distance": function () {},
         "InteriorPointArea": {
@@ -87,7 +88,8 @@ var jsts = {
             "NULL_ORDINATE": {},
             "X": {},
             "Y": {},
-            "Z": {}
+            "Z": {},
+            "equals3D": function() {}
         },
         "CoordinateList": {
             "coordArrayType": {}
@@ -573,10 +575,14 @@ jsts.geom.Geometry.prototype = {
     "distance": function () {},
     "equals": function () {},
     "equalsTopo": function () {},
+    "getBoundary": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
     "intersection": function () {},
     "intersects": function () {},
+    "isEmpty": function () {},
     "isSimple": function () {},
     "isValid": function () {},
     "isWithinDistance": function () {},
@@ -603,6 +609,8 @@ jsts.geom.GeometryCollection.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
     "intersection": function () {},
     "intersects": function () {},
@@ -632,7 +640,10 @@ jsts.geom.LineString.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
+    "getLength": function () {},
     "intersection": function () {},
     "intersects": function () {},
     "isSimple": function () {},
@@ -661,6 +672,8 @@ jsts.geom.LinearRing.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
     "intersection": function () {},
     "intersects": function () {},
@@ -690,7 +703,11 @@ jsts.geom.MultiLineString.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
+    "getGeometryN": function () {},
     "getInteriorPoint": function () {},
+    "getNumGeometries": function () {},
     "intersection": function () {},
     "intersects": function () {},
     "isSimple": function () {},
@@ -719,6 +736,8 @@ jsts.geom.MultiPoint.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
     "intersection": function () {},
     "intersects": function () {},
@@ -747,7 +766,11 @@ jsts.geom.MultiPolygon.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
+    "getGeometryN": function () {},
     "getInteriorPoint": function () {},
+    "getNumGeometries": function () {},
     "intersection": function () {},
     "intersects": function () {},
     "isSimple": function () {},
@@ -776,7 +799,11 @@ jsts.geom.Point.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
     "getInteriorPoint": function () {},
+    "getX": function () {},
+    "getY": function () {},
     "intersection": function () {},
     "intersects": function () {},
     "isValid": function () {},
@@ -803,7 +830,12 @@ jsts.geom.Polygon.prototype = {
     "equals": function () {},
     "equalsTopo": function () {},
     "getCentroid": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
+    "getExteriorRing": function () {},
     "getInteriorPoint": function () {},
+    "getInteriorRingN": function () {},
+    "getNumInteriorRing": function () {},
     "intersection": function () {},
     "intersects": function () {},
     "isSimple": function () {},
@@ -817,6 +849,27 @@ jsts.geom.Polygon.prototype = {
     "touches": function () {},
     "union": function () {},
     "within": function () {}
+};
+jsts.geom.GeometryFactory.prototype = {
+    "createLineString": function () {},
+    "createLinearRing": function () {},
+    "createMultiLineString": function () {},
+    "createMultiPoint": function () {},
+    "createMultiPolygon": function () {},
+    "createPoint": function () {},
+    "createPolygon": function () {}
+};
+jsts.geom.LineSegment.prototype = {
+    "p0": {},
+    "p1": {},
+    "distance": function () {},
+    "getCoordinate": function () {},
+    "getCoordinates": function () {},
+    "getLength": function () {},
+    "intersection": function () {},
+    "midPoint": function () {},
+    "orientationIndex": function () {},
+    "toGeometry": function () {}
 };
 /**********************************************************************
  * End Generated Extern for src
