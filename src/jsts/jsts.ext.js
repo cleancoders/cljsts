@@ -36,7 +36,8 @@ var jsts = {
             "COUNTERCLOCKWISE": {},
             "LEFT": {},
             "RIGHT": {},
-            "STRAIGHT": {}
+            "STRAIGHT": {},
+            "isCCW": function() {}
         },
         "PointLocation": function () {},
         "PointLocator": function () {},
