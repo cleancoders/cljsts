@@ -2,11 +2,11 @@
 
 ClojureScript library wrapper for JSTS : https://github.com/bjornharrtell/jsts
 
-Current version wrapped: `2.11.3`
+Current version wrapped: `2.12.1`
 
 #### Rationale
 
-The `cljsjs` version of the library died at version 1.6.0. Meanwhile the JSTS library has evolved.
+The `cljsjs` version of the library died at version 1.6.0. Meanwhile, the JSTS library has evolved.
 
 ### Usage
 
@@ -21,3 +21,13 @@ Require the library:
 ```Clojure
 [com.cleancoders.cljsts]
 ```
+
+### Development
+
+The `jsts.min.js` can be found starting here: https://cdnjs.com/libraries/jsts
+
+Generate the `jsts.ext.js` here: https://jmmk.github.io/javascript-externs-generator/
+ * use `jsts` as the "extern object"
+ * add `"getConvexHull": function () {}` to `ConvexHull`
+ * add `"isCCW": function() {}` to `Orientation`
+
